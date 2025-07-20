@@ -44,20 +44,20 @@ const Oboarding = () => {
     <View className="flex-1">
       <Onboarding
         onDone={handleDone}
-        containerStyles={{ paddingHorizontal: 20 }}
+        containerStyles={{ paddingHorizontal: 20}}
         bottomBarHighlight={false}
         nextLabel={<NextLable />}
         skipLabel={<SkipLable />}
         DoneButtonComponent={DoneButtonComp}
         controlStatusBar={false}
-        titleStyles={{ fontSize: 23, fontWeight: "600" }}
-        bottomBarHeight={160}
+        titleStyles={{ fontSize: 23, fontWeight: "700" }}
+        bottomBarHeight={140}        imageContainerStyles={{paddingTop: 0, marginTop:0}}
         pages={[
           {
             backgroundColor: "#007aff",
             image: (
               <LottieView
-                style={{ width: width, height: width }}
+                style={{ width: width * 0.8, height: width / 2 }}
                 source={require("../../assets/animations/Team.json")}
                 autoPlay
                 loop
@@ -71,7 +71,7 @@ const Oboarding = () => {
             backgroundColor: "#f97316",
             image: (
               <LottieView
-                style={{ width: width * 0.9, height: width }}
+                style={{ width: width * 0.9, height: width / 2 }}
                 source={require("../../assets/animations/Interview..json")}
                 autoPlay
                 loop
@@ -85,7 +85,7 @@ const Oboarding = () => {
             backgroundColor: "#ee2141",
             image: (
               <LottieView
-                style={{ width: width * 0.9, height: width }}
+                style={{ width: width * 0.9, height: width / 2 }}
                 source={require("../../assets/animations/Boy working on laptop lottie animation.json")}
                 autoPlay
                 loop={false}
