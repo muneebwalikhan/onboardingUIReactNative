@@ -54,7 +54,7 @@ const images = {
 
 const Oboarding2 = () => {
   const { width } = useWindowDimensions();
-  const imageSize = width * 0.8;
+  const imageSize = width * 0.7;
   const [isClicked, setIsClicked] = useState(false);
   const titleY = useSharedValue(-90);
   const subY = useSharedValue(90);
