@@ -8,7 +8,6 @@ import Animated, {
 } from "react-native-reanimated";
 import { View } from "react-native";
 import Svg, { Path } from "react-native-svg";
-import { COLORSPACK } from "../colors/Colors";
 
 const AnimatedPath = Animated.createAnimatedComponent(Path);
 

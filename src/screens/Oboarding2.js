@@ -1,4 +1,11 @@
-import { View, Text, Dimensions, Image, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  Dimensions,
+  Image,
+  TouchableOpacity,
+  useWindowDimensions,
+} from "react-native";
 import React, { useEffect, useState } from "react";
 import { SafeAreaView, SafeAreaProvider } from "react-native-safe-area-context";
 import { COLORSPACK } from "../colors/Colors";
@@ -46,6 +53,8 @@ const images = {
 };
 
 const Oboarding2 = () => {
+  const { width } = useWindowDimensions();
+  const imageSize = width * 0.8;
   const [isClicked, setIsClicked] = useState(false);
   const titleY = useSharedValue(-90);
   const subY = useSharedValue(90);
@@ -66,7 +75,7 @@ const Oboarding2 = () => {
       easing: Easing.out(Easing.exp),
     });
     titleY.value = withSpring(-90, {
-      duration: 7000,
+      duration: 3000,
       dampingRatio: 0.7,
       stiffness: 202,
       restDisplacementThreshold: 27.84,
@@ -74,7 +83,7 @@ const Oboarding2 = () => {
       reduceMotion: ReduceMotion.System,
     });
     subY.value = withSpring(90, {
-      duration: 7000,
+      duration: 3000,
       dampingRatio: 0.7,
       stiffness: 202,
       overshootClamping: true,
@@ -149,7 +158,7 @@ const Oboarding2 = () => {
       {steps === 1 ? (
         <Animated.View
           style={{ flex: 1 }}
-          entering={FadeIn.duration(1000).easing(Easing.inOut(Easing.quad))}
+          // entering={FadeIn.duration(1000).easing(Easing.inOut(Easing.quad))}
           layout={LinearTransition.duration(7000)}
         >
           {/* bg container back */}
@@ -161,7 +170,11 @@ const Oboarding2 = () => {
               <View style={{ marginTop: 75 }} className="items-center">
                 <Image
                   source={images.LAYER1.sourceImage}
-                  style={{ height: 300, width: 300, resizeMode: "cover" }}
+                  style={{
+                    height: imageSize,
+                    width: imageSize,
+                    resizeMode: "cover",
+                  }}
                 />
               </View>
 
@@ -240,7 +253,7 @@ const Oboarding2 = () => {
       ) : steps === 2 ? (
         <Animated.View
           style={{ flex: 1 }}
-          entering={FadeIn.duration(1000).easing(Easing.inOut(Easing.quad))}
+          // entering={FadeIn.duration(1000).easing(Easing.inOut(Easing.quad))}
           layout={LinearTransition.duration(7000)}
         >
           {/* bg container back */}
@@ -252,7 +265,11 @@ const Oboarding2 = () => {
               <View style={{ marginTop: 75 }} className="items-center">
                 <Image
                   source={images.LAYER2.sourceImage}
-                  style={{ height: 300, width: 300, resizeMode: "cover" }}
+                  style={{
+                    height: imageSize,
+                    width: imageSize,
+                    resizeMode: "cover",
+                  }}
                 />
               </View>
 
@@ -331,7 +348,7 @@ const Oboarding2 = () => {
       ) : steps === 3 ? (
         <Animated.View
           style={{ flex: 1 }}
-          entering={FadeIn.duration(1000).easing(Easing.inOut(Easing.quad))}
+          // entering={FadeIn.duration(1000).easing(Easing.inOut(Easing.quad))}
           layout={LinearTransition.duration(7000)}
         >
           {/* bg container back */}
@@ -343,7 +360,11 @@ const Oboarding2 = () => {
               <View style={{ marginTop: 75 }} className="items-center">
                 <Image
                   source={images.LAYER3.sourceImage}
-                  style={{ height: 300, width: 300, resizeMode: "cover" }}
+                  style={{
+                    height: imageSize,
+                    width: imageSize,
+                    resizeMode: "cover",
+                  }}
                 />
               </View>
 
