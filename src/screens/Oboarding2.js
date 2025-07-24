@@ -158,7 +158,6 @@ const Oboarding2 = () => {
       {steps === 1 ? (
         <Animated.View
           style={{ flex: 1 }}
-          // entering={FadeIn.duration(1000).easing(Easing.inOut(Easing.quad))}
           layout={LinearTransition.duration(7000)}
         >
           {/* bg container back */}
@@ -253,7 +252,6 @@ const Oboarding2 = () => {
       ) : steps === 2 ? (
         <Animated.View
           style={{ flex: 1 }}
-          // entering={FadeIn.duration(1000).easing(Easing.inOut(Easing.quad))}
           layout={LinearTransition.duration(7000)}
         >
           {/* bg container back */}
@@ -348,7 +346,6 @@ const Oboarding2 = () => {
       ) : steps === 3 ? (
         <Animated.View
           style={{ flex: 1 }}
-          // entering={FadeIn.duration(1000).easing(Easing.inOut(Easing.quad))}
           layout={LinearTransition.duration(7000)}
         >
           {/* bg container back */}
