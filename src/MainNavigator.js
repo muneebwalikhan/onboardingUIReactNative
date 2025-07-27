@@ -8,6 +8,11 @@ import Home from "./screens/Home";
 import Oboarding from "./screens/Oboarding";
 import Oboarding2 from "./screens/Oboarding2.js";
 import WaterEffect from "./Components/WaterEffect.js";
+import UseRefHook from "./HooksReactNative/UseRef/UseRefHook.js";
+import Comp1 from "./HooksReactNative/useContext/Comp1.js";
+import Comp2 from "./HooksReactNative/useContext/Comp2.js";
+import Comp3 from "./HooksReactNative/useContext/Comp3.js";
+import ParentContext from "./HooksReactNative/useContext/ParentContext.js";
 
 SplashScreen.preventAutoHideAsync()
 
@@ -30,11 +35,18 @@ const MainNavigator = () => {
   
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="onBoarding2">
+      <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={Home} options={{headerShown: false}} />
         <Stack.Screen name="onBoarding" component={Oboarding} options={{headerShown: false}} />
         <Stack.Screen name="onBoarding2" component={Oboarding2} options={{headerShown: false}} />
-        <Stack.Screen name="Effects" component={WaterEffect} options={{headerShown: false}} />
+        <Stack.Screen name="userefhook" component={UseRefHook} options={{headerShown: false}} />
+        {/* <Stack.Screen name="Effects" component={WaterEffect} options={{headerShown: false}} /> */}
+
+        {/* context screens */}
+        <Stack.Screen name="ParentContext" component={ParentContext} options={{headerShown: true, title:'Parent Context'}} />
+        <Stack.Screen name="comp1" component={Comp1} options={{headerShown: true}} />
+        <Stack.Screen name="comp2" component={Comp2} options={{headerShown: true}} />
+        <Stack.Screen name="comp3" component={Comp3} options={{headerShown: true}} />
       </Stack.Navigator>
     </NavigationContainer>
   );

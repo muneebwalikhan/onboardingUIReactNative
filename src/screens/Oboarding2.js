@@ -71,11 +71,11 @@ const Oboarding2 = () => {
 
     // start
     opacity.value = withTiming(0, {
-      duration: 1000,
+      duration: 500,
       easing: Easing.out(Easing.exp),
     });
     titleY.value = withSpring(-90, {
-      duration: 3000,
+      duration: 500,
       dampingRatio: 0.7,
       stiffness: 202,
       restDisplacementThreshold: 27.84,
@@ -83,7 +83,7 @@ const Oboarding2 = () => {
       reduceMotion: ReduceMotion.System,
     });
     subY.value = withSpring(90, {
-      duration: 3000,
+      duration: 500,
       dampingRatio: 0.7,
       stiffness: 202,
       overshootClamping: true,

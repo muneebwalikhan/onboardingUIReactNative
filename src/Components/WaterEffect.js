@@ -34,7 +34,7 @@ export default function WaterEffect({ isClicked, setIsClicked, bgColor }) {
       stiffness: 60,
       mass: 0.4,
       overshootClamping: true,
-      duration: 6000,
+      duration: 3000,
     });
 
     // reset
