@@ -18,6 +18,10 @@ export const Routes = [
       screenName: "Parent Context",
       routeName: "ParentContext",
     },
+    {
+      screenName: "Parent UseCallBack",
+      routeName: "usecallbackhookParent",
+    },
   ],
   [
     {
@@ -31,6 +35,16 @@ export const Routes = [
     {
       screenName: "Comp 3",
       routeName: "comp3",
+    },
+  ],
+  [
+    {
+      screenName: "CallBack 1",
+      routeName: "usecallback1",
+    },
+    {
+      screenName: "CallBack 2",
+      routeName: "usecallback2",
     },
   ],
 ];
